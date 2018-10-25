@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gplacespicker.iml" filepath="$PROJECT_DIR$/gplacespicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gplacespicker_android.iml" filepath="$PROJECT_DIR$/gplacespicker_android.iml" />
+    </modules>
+  </component>
+</project>
