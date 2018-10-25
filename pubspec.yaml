@@ -1,7 +1,7 @@
 name: gplacespicker
 description: Google Place Picker for Android only.
 version: 0.0.1
-author: Muhammad Hanif Budiarto
+author: Muhammad Hanif Budiarto <m.hanifbudiarto@gmail.com>
 homepage: https://github.com/hanifbudiarto/gplacespicker
 
 environment:
