@@ -156,11 +156,19 @@ public class GplacespickerPlugin implements MethodCallHandler,
         }
         return true;
       }
+      else if (resultCode == Activity.RESULT_CANCELED) {
+        currentResult.success(null);
+        return false;
+      }
     }
 
     if (requestCode == REQUEST_LOCATION_SETTINGS) {
       if (resultCode == Activity.RESULT_OK) {
         openPlacePicker();
+      }
+      else if (resultCode == Activity.RESULT_CANCELED) {
+        currentResult.success(null);
+        return false;
       }
     }
     return false;
