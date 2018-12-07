@@ -32,6 +32,12 @@ class _MyAppState extends State<MyApp> {
                 });
               },
             ),
+            RaisedButton(
+              child: Text("navigate"),
+              onPressed: () async {
+                await Gplacespicker.openNavigation(-7.2809592, 112.7811952);
+              },
+            )
           ],
         ),
       ),

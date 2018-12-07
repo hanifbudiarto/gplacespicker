@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -67,7 +68,24 @@ public class GplacespickerPlugin implements MethodCallHandler,
       else {
         requestPermission();
       }
-    }else {
+    }
+    else if (call.method.equals("openNavigation")) {
+      double latitude = 0.0;
+      double longitude = 0.0;
+
+      if (call.hasArgument("latitude")) {
+        latitude = call.argument("latitude");
+      }
+
+      if (call.hasArgument("longitude")) {
+        longitude = call.argument("longitude");
+      }
+
+      Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+              Uri.parse("google.navigation:q="+latitude+","+longitude));
+      activity.startActivity(intent);
+    }
+    else {
       result.notImplemented();
     }
   }
